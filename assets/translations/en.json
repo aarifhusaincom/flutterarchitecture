@@ -1,0 +1,10 @@
+{
+  "app_title": "MVVM Boilerplate",
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "logout": "Logout",
+  "counter_title": "Counter",
+  "increment": "Increment",
+  "decrement": "Decrement"
+}
