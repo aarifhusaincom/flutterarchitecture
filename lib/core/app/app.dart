@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: appViewModel.themeMode,
+navigatorKey: AppKeys.navigatorKey,
       // locale: context.locale,
       // supportedLocales: context.supportedLocales,
       // localizationsDelegates: context.localizationDelegates,
@@ -25,3 +26,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
