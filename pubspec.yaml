@@ -2,9 +2,13 @@ name: flutterarchitecture
 description: "A new Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
+
+
 #----------------------------
 environment:
   sdk: ^3.10.0
+
+
 #----------------------------
 dependencies:
   flutter:
@@ -16,6 +20,8 @@ dependencies:
   provider: ^6.1.5
   dio: ^5.9.0
   shared_preferences: ^2.5.3
+
+
 #----------------------------
   flutterprovider:
     path: ../flutterprovider
@@ -35,5 +41,6 @@ flutter:
     - assets/jsons/
     - assets/lottiefiles/
     - assets/texts/
-    - assets/videos
+    - assets/translations/
+    - assets/videos/
 #----------------------------
