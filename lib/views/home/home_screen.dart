@@ -15,6 +15,7 @@ class HomeView extends StatelessWidget {
     final authVM = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
+key: AppKeys.scaffoldKey,
       appBar: AppBar(
         title: Text('counter_title'),
         actions: [
