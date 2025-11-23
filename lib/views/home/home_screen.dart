@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
+import '../../core/app/app_keys.dart';
 import '../../core/widgets/other_widgets/counter_display.dart';
-import '../../viewmodels/home_viewmodel.dart';
 import '../../viewmodels/auth_viewmodel.dart';
+import '../../viewmodels/home_viewmodel.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
     final authVM = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-key: AppKeys.scaffoldKey,
+      key: AppKeys.scaffoldKey,
       appBar: AppBar(
         title: Text('counter_title'),
         actions: [
@@ -30,12 +30,10 @@ key: AppKeys.scaffoldKey,
                 // );
               }
             },
-          )
+          ),
         ],
       ),
-      body: Center(
-        child: CounterDisplay(value: homeVM.counter),
-      ),
+      body: Center(child: CounterDisplay(value: homeVM.counter)),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

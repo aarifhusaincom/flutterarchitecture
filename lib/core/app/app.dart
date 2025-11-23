@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../viewmodels/app/app_viewmodel.dart';
 import '../theme/app_theme/app_theme.dart';
+import 'app_keys.dart';
 import 'app_routes.dart';
 
 class MyApp extends StatelessWidget {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: appViewModel.themeMode,
-navigatorKey: AppKeys.navigatorKey,
+      navigatorKey: AppKeys.navigatorKey,
       // locale: context.locale,
       // supportedLocales: context.supportedLocales,
       // localizationsDelegates: context.localizationDelegates,
@@ -26,6 +28,3 @@ navigatorKey: AppKeys.navigatorKey,
     );
   }
 }
-
-
-
