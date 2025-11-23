@@ -1,15 +1,4 @@
-// import 'package:provider/provider.dart';
-//
-// import '../../viewmodels/app/app_viewmodel.dart';
-// import '../../viewmodels/home_viewmodel.dart';
-// class AppProviders {
-//   static final List<SingleChildWidget> providers = [
-//     ChangeNotifierProvider(create: (context) => AppViewModel()),
-//     ChangeNotifierProvider(create: (context) => HomeViewModel()),
-//   ];
-// }
-
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../viewmodels/app/app_viewmodel.dart';
