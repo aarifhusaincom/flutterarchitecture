@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import '../constants/app_keys.dart';
-import '../routes/app_routes.dart';
+
+import '../../core/app/app_keys.dart';
+
+/// Navigation Use (Anywhere, without context)
+/// context.read<NavigationProvider>().pushReplace(AppRoutes.home);
+/// context.read<NavigationProvider>().push(AppRoutes.login);
 
 class NavigationProvider with ChangeNotifier {
   // Push by route name
@@ -8,7 +12,7 @@ class NavigationProvider with ChangeNotifier {
     AppKeys.navigatorKey.currentState!.pushNamed(routeName);
   }
 
-  // Replace screen
+  // Replace Screen
   void pushReplace(String routeName) {
     AppKeys.navigatorKey.currentState!.pushReplacementNamed(routeName);
   }
@@ -23,6 +27,14 @@ class NavigationProvider with ChangeNotifier {
 
   // Pop
   void pop() {
-    AppKeys.navigatorKey.currentState!.pop();
+    AppKeys.navigatorKey.currentState!.canPop();
+  }
+
+  // Push And Remove Until
+  void pushAndRemoveUntil(String routeName) {
+    AppKeys.navigatorKey.currentState!.pushNamedAndRemoveUntil(
+      routeName,
+      (route) => false,
+    );
   }
 }
