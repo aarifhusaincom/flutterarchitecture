@@ -2,33 +2,54 @@ name: flutterarchitecture
 description: "A new Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
-
-
-#----------------------------
 environment:
   sdk: ^3.10.0
-
-
+#----------------------------
+#----------------------------
 #----------------------------
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+
+  #  prerequisite
   google_fonts: ^6.3.2
-  firebase_auth: ^5.6.2
-  firebase_core: ^3.15.2
   provider: ^6.1.5
   dio: ^5.9.0
+
+  #  firebase
+  firebase_core: ^3.15.2
+  firebase_auth: ^5.6.2
+  google_sign_in: ^6.2.1
+  cloud_firestore: ^6.1.0
+
+  #  local worker
   shared_preferences: ^2.5.3
+  crypto: ^3.0.7
+
+  #  media
+  flutter_svg: ^2.0.10+1
+  carousel_slider: ^5.0.0
+  cached_network_image: ^3.4.1
+
+  #  ui
+  pinput: ^6.0.0
 
 
-#----------------------------
+  #----------------------------
+  #----------------------------
+  #----------------------------
   flutterprovider:
     path: ../flutterprovider
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+
+  #  app icons
+  flutter_launcher_icons: ^0.13.1
+#----------------------------
+#----------------------------
 #----------------------------
 flutter:
   uses-material-design: true
@@ -38,9 +59,17 @@ flutter:
     - assets/gifs/
     - assets/icons/
     - assets/images/
+    - assets/illustrations/
     - assets/jsons/
     - assets/lottiefiles/
     - assets/texts/
     - assets/translations/
     - assets/videos/
 #----------------------------
+#----------------------------
+#----------------------------
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"

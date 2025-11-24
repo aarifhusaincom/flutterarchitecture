@@ -6,7 +6,7 @@ import '../../core/app/app_keys.dart';
 /// context.read<NavigationProvider>().pushReplace(AppRoutes.home);
 /// context.read<NavigationProvider>().push(AppRoutes.login);
 
-class NavigationProvider with ChangeNotifier {
+class RouteNavigationViewmodel with ChangeNotifier {
   // Push by route name
   void push(String routeName) {
     AppKeys.navigatorKey.currentState!.pushNamed(routeName);

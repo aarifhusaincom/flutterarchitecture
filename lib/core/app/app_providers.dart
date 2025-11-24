@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../viewmodels/app/app_viewmodel.dart';
+import '../../viewmodels/app/text_theme_provider.dart';
 import '../../viewmodels/home_viewmodel.dart';
 
 class AppProviders extends StatelessWidget {
@@ -15,6 +16,7 @@ class AppProviders extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => AppViewModel()),
         ChangeNotifierProvider(create: (context) => HomeViewModel()),
+        ChangeNotifierProvider(create: (context) => TextThemeProvider()),
       ],
       child: child,
     );

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../../core/network/api_client.dart';
-import '../../core/network/api_endpoints.dart';
+import '../../network/api_client.dart';
+import '../../network/api_endpoints.dart';
 
 class AuthApiService {
   final _client = ApiClient();
@@ -9,10 +9,7 @@ class AuthApiService {
   Future<Response> login(String email, String password) {
     return _client.post(
       ApiEndpoints.login,
-      data: {
-        'email': email,
-        'password': password,
-      },
+      data: {'email': email, 'password': password},
     );
   }
 
