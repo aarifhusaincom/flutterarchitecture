@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppThemeData {
+class AppThemeDataOverrides {
   static ElevatedButtonThemeData elevatedButtonTheme({
     required ColorScheme colorScheme,
   }) {
@@ -23,10 +23,7 @@ class AppThemeData {
       style: OutlinedButton.styleFrom(
         foregroundColor: colorScheme.primary,
         backgroundColor: colorScheme.onPrimary,
-        side: BorderSide(
-          color: colorScheme.primary,
-          width: 1.5,
-        ),
+        side: BorderSide(color: colorScheme.primary, width: 1.5),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -34,7 +31,9 @@ class AppThemeData {
     );
   }
 
-  static TextButtonThemeData textButtonTheme ({required ColorScheme colorScheme}){
+  static TextButtonThemeData textButtonTheme({
+    required ColorScheme colorScheme,
+  }) {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: colorScheme.primary,

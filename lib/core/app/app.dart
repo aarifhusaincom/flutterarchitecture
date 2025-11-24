@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appViewModel = Provider.of<AppProvider>(context);
+    final appProvider = Provider.of<AppProvider>(context);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MVVM Boilerplate',
       theme: AppTheme.lightTheme(context),
       darkTheme: AppTheme.darkTheme(context),
-      themeMode: appViewModel.themeMode,
+      themeMode: appProvider.themeMode,
       navigatorKey: AppKeys.navigatorKey,
       // locale: context.locale,
       // supportedLocales: context.supportedLocales,

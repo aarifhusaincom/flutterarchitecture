@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/app/app_routes.dart';
+import '../../viewmodels/app/route_navigation_provider.dart';
 import '../../viewmodels/auth_provider.dart';
 
 class SplashView extends StatefulWidget {
@@ -19,17 +20,26 @@ class _SplashViewState extends State<SplashView> {
   }
 
   Future<void> _goNext() async {
-    await Future.delayed(const Duration(seconds: 2));
-    final auth = Provider.of<AuthProvider>(context, listen: false);
-    if (auth.user != null) {
-      Navigator.pushReplacementNamed(context, AppRoutes.home);
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    final routeNavigationProvider = Provider.of<RouteNavigationProvider>(
+      context,
+      listen: false,
+    );
+
+    await Future.delayed(const Duration(seconds: 3));
+
+    if (authProvider.user != null) {
+      routeNavigationProvider.pushReplace(AppRoutes.home);
     } else {
-      Navigator.pushReplacementNamed(context, AppRoutes.login);
+      routeNavigationProvider.pushReplace(AppRoutes.login);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      body: Center(child: CircularProgressIndicator()),
+    );
   }
 }

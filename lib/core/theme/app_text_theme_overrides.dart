@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../material-theme/create_text_theme.dart';
+import 'create_text_theme.dart';
 
 /// This file contains only the overrides for specific TextStyles.
 ///
