@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/app/app_routes.dart';
-import '../../viewmodels/auth_viewmodel.dart';
+import '../../viewmodels/auth_provider.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
 
   Future<void> _goNext() async {
     await Future.delayed(const Duration(seconds: 2));
-    final auth = Provider.of<AuthViewModel>(context, listen: false);
+    final auth = Provider.of<AuthProvider>(context, listen: false);
     if (auth.user != null) {
       Navigator.pushReplacementNamed(context, AppRoutes.home);
     } else {
@@ -30,8 +30,6 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
-    );
+    return const Scaffold(body: Center(child: CircularProgressIndicator()));
   }
 }

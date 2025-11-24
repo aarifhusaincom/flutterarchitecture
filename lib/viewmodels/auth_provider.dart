@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/services/auth/firebase_auth_service.dart';
 import '../models/user_model.dart';
 
-class AuthViewModel extends ChangeNotifier {
+class AuthProvider extends ChangeNotifier {
   final FirebaseAuthService _firebaseAuthService = FirebaseAuthService();
 
   UserModel? user;

@@ -3,16 +3,16 @@ import 'package:provider/provider.dart';
 
 import '../../core/app/app_keys.dart';
 import '../../core/widgets/other_widgets/counter_display.dart';
-import '../../viewmodels/auth_viewmodel.dart';
-import '../../viewmodels/home_viewmodel.dart';
+import '../../viewmodels/auth_provider.dart';
+import '../../viewmodels/home_provider.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final homeVM = Provider.of<HomeViewModel>(context);
-    final authVM = Provider.of<AuthViewModel>(context);
+    final homeVM = Provider.of<HomeProvider>(context);
+    final authVM = Provider.of<AuthProvider>(context);
 
     return Scaffold(
       key: AppKeys.scaffoldKey,

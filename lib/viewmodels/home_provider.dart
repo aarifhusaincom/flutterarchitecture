@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeViewModel extends ChangeNotifier {
+class HomeProvider extends ChangeNotifier {
   int counter = 0;
 
   void increment() {

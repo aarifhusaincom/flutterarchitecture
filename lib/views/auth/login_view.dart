@@ -3,7 +3,7 @@
 // import 'package:easy_localization/easy_localization.dart';
 //
 // import '../../core/app/app_routes.dart';
-// import '../../viewmodels/auth_viewmodel.dart';
+// import '../../viewmodels/auth_provider.dart';
 //
 // import '../../core/helpers/validators.dart';
 //

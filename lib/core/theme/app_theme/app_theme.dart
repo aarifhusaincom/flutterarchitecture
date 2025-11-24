@@ -15,9 +15,10 @@ class AppTheme {
       scaffoldBackgroundColor: AppColorScheme.lightScheme().surface,
       canvasColor: AppColorScheme.lightScheme().surface,
       textTheme: createTextTheme(
-        context,
-        textProvider.bodyFont,
-        textProvider.displayFont,
+        context: context,
+        displayFontString: textProvider.displayFont,
+        bodyFontString: textProvider.bodyFont,
+        colorScheme: ColorSchemeType.lightTheme,
       ),
       // textTheme: AppTextTheme.lightTextTheme,
       elevatedButtonTheme: AppThemeData.elevatedButtonTheme(
@@ -41,9 +42,10 @@ class AppTheme {
       scaffoldBackgroundColor: AppColorScheme.darkScheme().surface,
       canvasColor: AppColorScheme.darkScheme().surface,
       textTheme: createTextTheme(
-        context,
-        textProvider.bodyFont,
-        textProvider.displayFont,
+        context: context,
+        displayFontString: textProvider.displayFont,
+        bodyFontString: textProvider.bodyFont,
+        colorScheme: ColorSchemeType.darkTheme,
       ),
       // textTheme: AppTextTheme.darkTextTheme,
       elevatedButtonTheme: AppThemeData.elevatedButtonTheme(

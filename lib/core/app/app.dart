@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../viewmodels/app/app_viewmodel.dart';
+import '../../viewmodels/app/app_provider.dart';
 import '../theme/app_theme/app_theme.dart';
 import 'app_keys.dart';
 import 'app_routes.dart';
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appViewModel = Provider.of<AppViewModel>(context);
+    final appViewModel = Provider.of<AppProvider>(context);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
