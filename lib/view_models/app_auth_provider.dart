@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
+import '../flutterarchitecture.dart';
 
-import '../core/services/auth/firebase_auth_service.dart';
-import '../models/user_model.dart';
-
-class AuthProvider extends ChangeNotifier {
+class AppAuthProvider extends ChangeNotifier {
   final FirebaseAuthService _firebaseAuthService = FirebaseAuthService();
 
   UserModel? user;

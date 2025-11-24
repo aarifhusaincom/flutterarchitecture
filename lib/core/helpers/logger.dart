@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import '../../flutterarchitecture.dart';
 
 class AppLogger {
   static void log(String message, {String tag = 'APP'}) {

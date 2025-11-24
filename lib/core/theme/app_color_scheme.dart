@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../flutterarchitecture.dart';
 
 class AppColorScheme {
   static ColorScheme lightScheme() {
@@ -51,6 +51,7 @@ class AppColorScheme {
       surfaceContainerHighest: Color(0xffecdfe5),
     );
   }
+
   static ColorScheme darkScheme() {
     return const ColorScheme(
       brightness: Brightness.dark,

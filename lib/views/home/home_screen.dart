@@ -1,18 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../core/app/app_keys.dart';
-import '../../core/widgets/other_widgets/counter_display.dart';
-import '../../viewmodels/auth_provider.dart';
-import '../../viewmodels/home_provider.dart';
+import '../../flutterarchitecture.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final homeVM = Provider.of<HomeProvider>(context);
-    final authVM = Provider.of<AuthProvider>(context);
+    final homeProvider = Provider.of<HomeProvider>(context);
+    final authProvider = Provider.of<AppAuthProvider>(context);
+    final routeNavigationProvider = Provider.of<RouteNavigationProvider>(
+      context,
+    );
 
     return Scaffold(
       key: AppKeys.scaffoldKey,
@@ -22,30 +19,25 @@ class HomeView extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
-              await authVM.logout();
-              if (context.mounted) {
-                // Navigator.of(context).pushAndRemoveUntil(
-                //   MaterialPageRoute(builder: (_) => const LoginView()),
-                //       (route) => false,
-                // );
-              }
+              await authProvider.logout();
+              routeNavigationProvider.pushAndRemove(AppRoutes.login);
             },
           ),
         ],
       ),
-      body: Center(child: CounterDisplay(value: homeVM.counter)),
+      body: Center(child: CounterDisplay(value: homeProvider.counter)),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
             heroTag: 'dec',
-            onPressed: homeVM.decrement,
+            onPressed: homeProvider.decrement,
             child: const Icon(Icons.remove),
           ),
           const SizedBox(width: 16),
           FloatingActionButton(
             heroTag: 'inc',
-            onPressed: homeVM.increment,
+            onPressed: homeProvider.increment,
             child: const Icon(Icons.add),
           ),
         ],

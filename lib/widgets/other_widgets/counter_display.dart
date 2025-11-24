@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../flutterarchitecture.dart';
 
 class CounterDisplay extends StatelessWidget {
   final int value;

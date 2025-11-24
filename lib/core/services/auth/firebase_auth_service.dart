@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import '../../../flutterarchitecture.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -6,7 +6,10 @@ class FirebaseAuthService {
   Stream<User?> authStateChanges() => _auth.authStateChanges();
 
   Future<User?> loginWithEmail(String email, String password) async {
-    final cred = await _auth.signInWithEmailAndPassword(email: email, password: password);
+    final cred = await _auth.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
     return cred.user;
   }
 

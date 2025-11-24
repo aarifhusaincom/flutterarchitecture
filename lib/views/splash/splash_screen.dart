@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../core/app/app_routes.dart';
-import '../../viewmodels/app/route_navigation_provider.dart';
-import '../../viewmodels/auth_provider.dart';
+import '../../flutterarchitecture.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -20,7 +15,7 @@ class _SplashViewState extends State<SplashView> {
   }
 
   Future<void> _goNext() async {
-    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    final authProvider = Provider.of<AppAuthProvider>(context, listen: false);
     final routeNavigationProvider = Provider.of<RouteNavigationProvider>(
       context,
       listen: false,

@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-
-
-import '../../views/home/home_screen.dart';
-import '../../views/splash/splash_screen.dart';
-
+import '../../flutterarchitecture.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -19,9 +14,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(child: Text('Route not found')),
-          ),
+          builder: (_) =>
+              const Scaffold(body: Center(child: Text('Route not found'))),
         );
     }
   }

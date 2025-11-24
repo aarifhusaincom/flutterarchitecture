@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../core/app/app_keys.dart';
+import '../../flutterarchitecture.dart';
 
 /// Navigation Use (Anywhere, without context)
 /// context.read<NavigationProvider>().pushReplace(AppRoutes.home);

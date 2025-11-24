@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../viewmodels/app/app_provider.dart';
-import '../theme/app_theme/app_theme.dart';
-import 'app_keys.dart';
-import 'app_routes.dart';
+import '../../flutterarchitecture.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

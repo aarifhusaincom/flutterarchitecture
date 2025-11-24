@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-
-import '../../../viewmodels/app/text_theme_provider.dart';
-import 'app_text_theme_overrides.dart';
+import '../../flutterarchitecture.dart';
 
 /// We will call this method to create a TextTheme object.
 /// Example 1: TextTheme textTheme = createTextTheme(context, "Roboto", "Poppins");

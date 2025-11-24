@@ -1,7 +1,4 @@
-import 'package:dio/dio.dart';
-
-import '../../network/api_client.dart';
-import '../../network/api_endpoints.dart';
+import '../../../flutterarchitecture.dart';
 
 class AuthApiService {
   final _client = ApiClient();

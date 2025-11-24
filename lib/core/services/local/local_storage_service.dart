@@ -1,4 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import '../../../flutterarchitecture.dart';
 
 class LocalStorageService {
   static late SharedPreferences _prefs;

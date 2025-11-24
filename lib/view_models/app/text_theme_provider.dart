@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../flutterarchitecture.dart';
 
 class TextThemeProvider extends ChangeNotifier {
   String _bodyFont = "Poppins";

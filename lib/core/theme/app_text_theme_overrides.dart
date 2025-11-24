@@ -1,6 +1,15 @@
-import 'package:flutter/material.dart';
+import '../../flutterarchitecture.dart';
 
-import 'create_text_theme.dart';
+// reference
+/// FontWeight.w100 → Thin
+/// FontWeight.w200 → Extra Light
+/// FontWeight.w300 → Light
+/// FontWeight.w400 → Normal / Regular
+/// FontWeight.w500 → Medium
+/// FontWeight.w600 → Semi-Bold
+/// FontWeight.w700 → Bold
+/// FontWeight.w800 → Extra Bold
+/// FontWeight.w900 → Black
 
 /// This file contains only the overrides for specific TextStyles.
 ///

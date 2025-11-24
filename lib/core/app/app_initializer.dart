@@ -1,5 +1,6 @@
 // import 'package:firebase_core/firebase_core.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '../../flutterarchitecture.dart';
+
 // import '../theme/app_theme.dart';
 // import '../../firebase_options.dart';
 // import '../theme/app_theme/app_theme.dart'; // optional

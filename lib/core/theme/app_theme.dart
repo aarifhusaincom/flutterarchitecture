@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../../viewmodels/app/text_theme_provider.dart';
-import 'app_color_scheme.dart';
-import 'app_theme_data_overrides.dart';
-import 'create_text_theme.dart';
+import '../../flutterarchitecture.dart';
 
 class AppTheme {
   static ThemeData lightTheme(BuildContext context) {

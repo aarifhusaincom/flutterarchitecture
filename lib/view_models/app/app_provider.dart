@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../flutterarchitecture.dart';
 
 class AppProvider extends ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.system;
