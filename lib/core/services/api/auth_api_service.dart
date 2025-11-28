@@ -1,4 +1,4 @@
-import '../../../flutterarchitecture.dart';
+import '../../../library.dart';
 
 class AuthApiService {
   final _client = ApiClient();

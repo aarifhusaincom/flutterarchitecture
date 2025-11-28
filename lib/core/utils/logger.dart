@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 class AppLogger {
   static void log(String message, {String tag = 'APP'}) {

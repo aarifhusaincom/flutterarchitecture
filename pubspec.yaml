@@ -25,6 +25,8 @@ dependencies:
 
   #  local worker
   shared_preferences: ^2.5.3
+  hive: ^2.2.3
+  path_provider: ^2.1.5
   crypto: ^3.0.7
 
   #  media
@@ -46,6 +48,11 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
 
+  # added
+  build_runner:
+  flutter_gen_runner:
+
+
   #  app icons
   flutter_launcher_icons: ^0.13.1
 #----------------------------
@@ -57,6 +64,7 @@ flutter:
     - assets/
     - assets/audios/
     - assets/gifs/
+    - assets/fonts/
     - assets/icons/
     - assets/images/
     - assets/illustrations/
@@ -73,3 +81,21 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/icons/app_icon.png"
+
+#----------------------------
+flutter_gen:
+  output: lib/core/flutter_gen_assets/ # Optional (default: lib/gen/)
+  # line_length: 80 # Optional
+
+  # Optional
+#  integrations:
+#    image: true
+#    flutter_svg: true
+#    lottie: true
+#    rive: true
+#    colors: true
+#    fonts: true
+
+# run this command if new assets added -> dart run build_runner build
+
+#----------------------------

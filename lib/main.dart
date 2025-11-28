@@ -1,4 +1,4 @@
-import 'flutterarchitecture.dart';
+import 'library.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

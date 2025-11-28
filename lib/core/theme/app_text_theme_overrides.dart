@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 // reference
 /// FontWeight.w100 → Thin
@@ -21,120 +21,122 @@ TextTheme textThemeOverrides({
   required TextTheme bodyTextTheme,
   required ColorSchemeType colorScheme,
 }) {
+  log("aarif - textThemeOverrides running $colorScheme");
   return TextTheme(
     /// display text
     displayLarge: displayTextTheme.displayLarge?.copyWith(
-      fontSize: 36,
-      fontWeight: FontWeight.bold,
+      fontSize: AppDefaultThemeTextSize.displayLarge,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     displayMedium: displayTextTheme.displayMedium?.copyWith(
-      fontSize: 32,
-      fontWeight: FontWeight.w600,
+      fontSize: AppDefaultThemeTextSize.displayMedium,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     displaySmall: displayTextTheme.displaySmall?.copyWith(
-      fontSize: 28,
-      fontWeight: FontWeight.w600,
+      fontSize: AppDefaultThemeTextSize.displaySmall,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
 
     /// headline text
     headlineLarge: displayTextTheme.headlineLarge?.copyWith(
-      fontSize: 26,
-      fontWeight: FontWeight.w600,
+      fontSize: AppDefaultThemeTextSize.headlineLarge,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     headlineMedium: displayTextTheme.headlineMedium?.copyWith(
-      fontSize: 24,
-      fontWeight: FontWeight.w500,
+      fontSize: AppDefaultThemeTextSize.headlineMedium,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     headlineSmall: displayTextTheme.headlineSmall?.copyWith(
-      fontSize: 22,
-      fontWeight: FontWeight.w500,
+      fontSize: AppDefaultThemeTextSize.headlineSmall,
+      fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
 
     /// title text
     titleLarge: bodyTextTheme.titleLarge?.copyWith(
-      fontSize: 20,
-      fontWeight: FontWeight.w600,
+      fontSize: AppDefaultThemeTextSize.titleLarge,
+      fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     titleMedium: bodyTextTheme.titleMedium?.copyWith(
-      fontSize: 16,
+      //fontSize: AppDefaultThemeTextSize.titleMedium,
+      fontSize: 32,
       fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.primary
+          : AppMaterialDarkColors.primary,
     ),
     titleSmall: bodyTextTheme.titleSmall?.copyWith(
-      fontSize: 14,
+      fontSize: AppDefaultThemeTextSize.titleSmall,
       fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
 
     /// body text
     bodyLarge: bodyTextTheme.bodyLarge?.copyWith(
-      fontSize: 16,
+      fontSize: AppDefaultThemeTextSize.bodyLarge,
       fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     bodyMedium: bodyTextTheme.bodyMedium?.copyWith(
-      fontSize: 14,
+      fontSize: AppDefaultThemeTextSize.bodyMedium,
       fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     bodySmall: bodyTextTheme.bodySmall?.copyWith(
-      fontSize: 12,
+      fontSize: AppDefaultThemeTextSize.bodySmall,
       fontWeight: FontWeight.normal,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white70,
+          ? AppMaterialLightColors.onSurfaceVariant
+          : AppMaterialDarkColors.onSurfaceVariant,
     ),
 
-    /// body text
+    /// label text
     labelLarge: bodyTextTheme.labelLarge?.copyWith(
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
+      fontSize: AppDefaultThemeTextSize.labelLarge,
+      fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     labelMedium: bodyTextTheme.labelMedium?.copyWith(
-      fontSize: 12,
+      fontSize: AppDefaultThemeTextSize.labelMedium,
       fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
     labelSmall: bodyTextTheme.labelSmall?.copyWith(
-      fontSize: 11,
+      fontSize: AppDefaultThemeTextSize.labelSmall,
       fontWeight: FontWeight.w500,
       color: colorScheme == ColorSchemeType.lightTheme
-          ? Colors.black87
-          : Colors.white,
+          ? AppMaterialLightColors.onSurface
+          : AppMaterialDarkColors.onSurface,
     ),
   );
 }

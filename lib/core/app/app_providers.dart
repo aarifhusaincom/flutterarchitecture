@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 class AppProviders extends StatelessWidget {
   final Widget child;
@@ -9,10 +9,14 @@ class AppProviders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => AppAuthProvider()),
+        ChangeNotifierProvider(create: (context) => AppMessengerProvider()),
+        ChangeNotifierProvider(create: (context) => AppThemeProvider()),
         ChangeNotifierProvider(create: (context) => RouteNavigationProvider()),
         ChangeNotifierProvider(create: (context) => TextThemeProvider()),
         ChangeNotifierProvider(create: (context) => HomeProvider()),
+        ChangeNotifierProvider(create: (context) => FontSizeProvider()),
+        ChangeNotifierProvider(create: (context) => AppAuthProvider()),
+        ChangeNotifierProvider(create: (context) => BottomNavigationProvider()),
       ],
       child: child,
     );

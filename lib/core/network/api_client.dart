@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 class ApiClient {
   static final ApiClient _instance = ApiClient._internal();

@@ -1,6 +1,6 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
-class AppColors {
+class AppExtraColors {
   static const Color primaryColor = Color(0xFF1976D2);
   static const Color secondaryColor = Color(0xFFFFC107);
   static const Color successColor = Color(0xFF4CAF50);

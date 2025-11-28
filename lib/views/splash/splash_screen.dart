@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -15,19 +15,19 @@ class _SplashViewState extends State<SplashView> {
   }
 
   Future<void> _goNext() async {
-    final authProvider = Provider.of<AppAuthProvider>(context, listen: false);
+    // final authProvider = Provider.of<AppAuthProvider>(context, listen: false);
     final routeNavigationProvider = Provider.of<RouteNavigationProvider>(
       context,
       listen: false,
     );
 
     await Future.delayed(const Duration(seconds: 3));
-
-    if (authProvider.user != null) {
-      routeNavigationProvider.pushReplace(AppRoutes.home);
-    } else {
-      routeNavigationProvider.pushReplace(AppRoutes.login);
-    }
+    routeNavigationProvider.pushReplace(AppRoutes.home);
+    // if (authProvider.user != null) {
+    //   routeNavigationProvider.pushReplace(AppRoutes.home);
+    // } else {
+    //   routeNavigationProvider.pushReplace(AppRoutes.login);
+    // }
   }
 
   @override

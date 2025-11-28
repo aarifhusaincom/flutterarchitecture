@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 /// We will call this method to create a TextTheme object.
 /// Example 1: TextTheme textTheme = createTextTheme(context, "Roboto", "Poppins");
@@ -12,13 +12,9 @@ TextTheme createTextTheme({
   colorScheme = ColorSchemeType.lightTheme,
 }) {
   TextTheme baseTextTheme = Theme.of(context).textTheme;
-  final isCustomTextTheme = Provider.of<TextThemeProvider>(
-    context,
-    listen: false,
-  );
 
   /// getTextTheme is a method from google_fonts package where you can pass two positional arguments bodyFontString and baseTextTheme
-  /// to create a new TextTheme .
+  /// to create a new TextTheme.
 
   TextTheme bodyTextTheme = GoogleFonts.getTextTheme(
     bodyFontString,
@@ -28,7 +24,8 @@ TextTheme createTextTheme({
     displayFontString,
     baseTextTheme,
   );
-  if (isCustomTextTheme.isCustomTextTheme) {
+  if (context.read<TextThemeProvider>().isCustomTextTheme) {
+    //if (false) {
     /// override apply from separate file
     final customTextTheme = textThemeOverrides(
       displayTextTheme: displayTextTheme,
@@ -45,23 +42,83 @@ TextTheme createTextTheme({
 
     TextTheme textTheme = displayTextTheme.copyWith(
       /// set from displayTextTheme
-      displayLarge: displayTextTheme.displayLarge,
-      displayMedium: displayTextTheme.displayMedium,
-      displaySmall: displayTextTheme.displaySmall,
-      headlineLarge: displayTextTheme.headlineLarge,
-      headlineMedium: displayTextTheme.headlineMedium,
-      headlineSmall: displayTextTheme.headlineSmall,
+      displayLarge: displayTextTheme.displayLarge?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      displayMedium: displayTextTheme.displayMedium?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      displaySmall: displayTextTheme.displaySmall?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      headlineLarge: displayTextTheme.headlineLarge?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      headlineMedium: displayTextTheme.headlineMedium?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      headlineSmall: displayTextTheme.headlineSmall?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
 
       /// set from bodyTextTheme
-      titleLarge: displayTextTheme.titleLarge,
-      titleMedium: displayTextTheme.titleMedium,
-      titleSmall: displayTextTheme.titleSmall,
-      bodyLarge: bodyTextTheme.bodyLarge,
-      bodyMedium: bodyTextTheme.bodyMedium,
-      bodySmall: bodyTextTheme.bodySmall,
-      labelLarge: bodyTextTheme.labelLarge,
-      labelMedium: bodyTextTheme.labelMedium,
-      labelSmall: bodyTextTheme.labelSmall,
+      titleLarge: displayTextTheme.titleLarge?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      titleMedium: displayTextTheme.titleMedium?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      titleSmall: displayTextTheme.titleSmall?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      bodyLarge: bodyTextTheme.bodyLarge?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      bodyMedium: bodyTextTheme.bodyMedium?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      bodySmall: bodyTextTheme.bodySmall?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurfaceVariant
+            : AppMaterialDarkColors.onSurfaceVariant,
+      ),
+      labelLarge: bodyTextTheme.labelLarge?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      labelMedium: bodyTextTheme.labelMedium?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
+      labelSmall: bodyTextTheme.labelSmall?.copyWith(
+        color: colorScheme == ColorSchemeType.lightTheme
+            ? AppMaterialLightColors.onSurface
+            : AppMaterialDarkColors.onSurface,
+      ),
     );
 
     return textTheme;

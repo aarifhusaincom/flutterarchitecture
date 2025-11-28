@@ -1,4 +1,4 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
 /// Navigation Use (Anywhere, without context)
 /// context.read<NavigationProvider>().pushReplace(AppRoutes.home);

@@ -33,7 +33,7 @@
 //
 //     return Scaffold(
 //       appBar: AppBar(
-//         title: Text('login'),
+//         title: CenterText('login'),
 //       ),
 //       body: Padding(
 //         padding: const EdgeInsets.all(16),
@@ -66,7 +66,7 @@
 //                     Navigator.pushReplacementNamed(context, AppRoutes.home);
 //                   } else if (!success && mounted) {
 //                     ScaffoldMessenger.of(context).showSnackBar(
-//                       SnackBar(content: Text(authVM.error ?? 'Error')),
+//                       SnackBar(content: CenterText(authVM.error ?? 'Error')),
 //                     );
 //                   }
 //                 },

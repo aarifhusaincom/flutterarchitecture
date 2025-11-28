@@ -1,9 +1,12 @@
-import '../../flutterarchitecture.dart';
+import '../../library.dart';
 
-class AppProvider extends ChangeNotifier {
+class AppThemeProvider extends ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.system;
 
   ThemeMode get themeMode => _themeMode;
+
+  // is dark mode
+  bool get isDarkMode => _themeMode == ThemeMode.dark;
 
   void toggleTheme() {
     _themeMode = _themeMode == ThemeMode.dark

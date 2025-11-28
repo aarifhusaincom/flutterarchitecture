@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591912370094",
+    "project_id": "flutterarchitecture2026",
+    "storage_bucket": "flutterarchitecture2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591912370094:android:b0c50b366021095113d23f",
+        "android_client_info": {
+          "package_name": "com.flutterarchitecture.flutterarchitecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591912370094-ocpq6df1ns7utgovccaejpul4dchkffq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC3qWI8nIMHRIzGz6rY5-rj7sCZErKZHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591912370094-ocpq6df1ns7utgovccaejpul4dchkffq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

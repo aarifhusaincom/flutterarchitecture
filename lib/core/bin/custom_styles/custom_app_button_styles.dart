@@ -64,7 +64,7 @@
 //       child: ElevatedButton(
 //         style: primary,
 //         onPressed: onPressed,
-//         child: Text(text),
+//         child: CenterText(text),
 //       ),
 //     );
 //   }
