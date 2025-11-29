@@ -36,6 +36,7 @@ dependencies:
 
   #  ui
   pinput: ^6.0.0
+  font_awesome_flutter: ^10.12.0
 
 
   #----------------------------
