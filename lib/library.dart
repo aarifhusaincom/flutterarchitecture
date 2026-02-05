@@ -24,15 +24,15 @@ export 'package:firebase_core/firebase_core.dart';
 export 'package:flutter/foundation.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter_svg/flutter_svg.dart';
-///------------------------------------------------------///
-/// 📂 [core]
-///      📂 [app]
-export 'package:flutterarchitecture/core/app/app.dart';
 export 'package:flutterarchitecture/core/app/app_assets.dart';
 export 'package:flutterarchitecture/core/app/app_initializer.dart';
 export 'package:flutterarchitecture/core/app/app_keys.dart';
 export 'package:flutterarchitecture/core/app/app_providers.dart';
 export 'package:flutterarchitecture/core/app/app_routes.dart';
+///------------------------------------------------------///
+/// 📂 [core]
+///      📂 [app]
+export 'package:flutterarchitecture/core/app/my_app.dart';
 ///     📂 [flutter_gen_assets]
 export 'package:flutterarchitecture/core/flutter_gen_assets/assets.gen.dart';
 ///     📂 [utils]
